@@ -1,0 +1,64 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr ;
+    grid-template-areas: 
+     "poo sistemas_operativos administracion"
+     "poo arquitectura base_de_datos";
+}
+
+.poo{
+    grid-area: poo;
+    background-color: blue;
+}
+
+.sistemas_operativos{
+    grid-area: sistemas_operativos;
+    background-color: chartreuse;
+}
+
+.administracion{
+    grid-area: administracion;
+    background-color: chocolate;
+}
+
+.arquitectura{
+    grid-area: arquitectura;
+    background-color: gold;
+}
+
+.base_de_datos{
+    grid-area: base_de_datos;
+    background-color: antiquewhite;
+}
+
+.container> div{
+    display: grid;
+    justify-content:center;
+    align-items: center;
+}
+
+@media screen and(max-width: 480px)  {
+
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .container >* {
+        flex: 1;
+    }
+
+    .logo{
+        flex: 1.5;
+    }
+    
+}
